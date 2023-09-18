@@ -13,6 +13,9 @@ export default defineConfig({
     },
 },
   plugins: [react()],
+  build: {
+    outDir: 'dist',
+  },
   define: {
     global: "globalThis",
     "process.env": {},
