@@ -5,17 +5,14 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: [
-        '@safe-globalThis/safe-ethers-adapters', // Add this line
-        //'@thirdweb-dev/wallets',
+        '@safe-globalThis/safe-ethers-adapters',
         "@safe-globalThis/safe-ethers-lib",
         '@safe-globalThis/safe-core-sdk',
       ],
     },
-},
-  plugins: [react()],
-  build: {
-    outDir: 'dist',
+    outDir: 'dist', // Specify your desired output directory here
   },
+  plugins: [react()],
   define: {
     global: "globalThis",
     "process.env": {},
