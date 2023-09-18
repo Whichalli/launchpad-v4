@@ -6,12 +6,12 @@ export default defineConfig({
     rollupOptions: {
       external: [
         '@safe-globalThis/safe-ethers-adapters', // Add this line
-        '@thirdweb-dev/wallets',
-        '@safe-global/safe-core-sdk',
+        //'@thirdweb-dev/wallets',
+        "@safe-globalThis/safe-ethers-lib",
+        '@safe-globalThis/safe-core-sdk',
       ],
     },
-  },
-  
+},
   plugins: [react()],
   define: {
     global: "globalThis",
